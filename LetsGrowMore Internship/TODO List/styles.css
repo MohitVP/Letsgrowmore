@@ -1,0 +1,113 @@
+body {
+  background-color: #ac2f2f;
+}
+
+
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #ffefef, #ffffff);
+  animation: containerAnimation 1s ease-in-out;
+}
+
+@keyframes containerAnimation {
+0% {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.add-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: white;
+}
+
+.todo-item {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 10px;
+padding: 10px;
+border-radius: 5px;
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+animation: itemAnimation 1s ease-in-out;
+}
+
+@keyframes itemAnimation {
+0% {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+100% {
+  opacity: 1;
+  transform: translateX(0);
+}
+}
+
+.task-text {
+flex: 1;
+margin-right: 10px;
+}
+
+.complete-button {
+padding: 5px;
+margin-right: 5px;
+border: none;
+background-color: #4caf50;
+color: white;
+opacity: 1;
+transition: opacity 0.2s;
+}
+
+.delete-button {
+padding: 5px;
+border: none;
+background-color: #f44336;
+color: white;
+opacity: 1;
+transition: opacity 0.2s;
+}
+
+.todo-item:hover .complete-button,
+.todo-item:hover .delete-button {
+opacity: 1;
+}
+
+.completed .task-text {
+text-decoration: line-through;
+}
